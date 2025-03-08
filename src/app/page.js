@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import ColTwoGrid from './user/Component/ColTwoGrid';
+import ColTwoGrid from '../component/ColTwoGrid';
 const Home = () =>  {
   return (
     <>
