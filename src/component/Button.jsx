@@ -1,39 +1,37 @@
 import React from 'react'
-import PropTypes from "prop-types";
 import Link from "next/link";
-// function Button(props) {
-//   const {children , style}  = props
-//   return (
-//     <div>
-//       <button style={style ? style : {color: white, backgroundColor: '#ff0092',   }}>{children}</button>
-//     </div>
-//   )
-// }
 
-// export default Button
-
-
-
-
-
-const Button = ({ type , text }) => {
+const Button = ({ type , text, href }) => {
 
   const buttonTypes = {
     primary:
-        " text-base xl:text-lg font-bold !leading-tight epilogue ",
+        " text-base text-lg font-bold !leading-tight epilogue inline-block ",
     "primary-pink-transparent":
-        " text-base xl:text-lg font-bold !leading-tight epilogue bg-[#ff0092] text-[white] whitespace-nowrap border-2  py-4 xl:py-5 px-6 xl:px-8 rounded-[10px] ",
+        " text-base text-lg font-bold !leading-tight inline-block epilogue bg-[#ff0092] text-[white] whitespace-nowrap border-2  py-5 px-8 rounded-[10px] ",
     "primary-transparent":
-        "text-base xl:text-lg font-bold !leading-tight epilogue bg-transparent text-white whitespace-nowrap border-2 border-white py-4 xl:py-5 px-6 xl:px-8 rounded-[10px]",
+        "text-base text-lg font-bold !leading-tight  inline-block epilogue bg-transparent text-white whitespace-nowrap border-2 border-white  py-5 px-8 rounded-[10px]",
     secondary:
-        "text-base xl:text-lg font-bold text-black !leading-tight epilogue pr-9 ",
+        "text-base text-lg font-bold text-black inline-block !leading-tight epilogue pr-9 ",
     "secondary-white":
-        "text-base xl:text-lg font-bold text-white !leading-tight epilogue pr-9 "
+        "text-base text-lg font-bold text-white inline-block !leading-tight epilogue pr-9 "
 };
+const arrowTypes = {
+
+}
   return (
    
-     <button className={`${buttonTypes[type]}`} > {text}  </button> 
- 
+    <Link className={`${buttonTypes[type]} group relative`} href={href}>
+  {text}
+  <span
+    className={`rotate-[-45deg] absolute right-2 top-4 transition-transform duration-300 scale-90 group-hover:rotate-[0deg] top-[21px] ${
+      type === "primary-pink-transparent" || type === "primary-transparent"
+        ? "text-white"
+        : "text-black"
+    }`}
+  >
+    ➝
+  </span>
+</Link>
   )
 }
 

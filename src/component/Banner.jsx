@@ -45,7 +45,9 @@ const Banner = () => {
   safer, and more seamless than ever. 
   </p>
     
-<Button type = {'primary-pink-transparent'}  text={'link more'}/ >
+
+
+
 </div>
 </div>
 </div>

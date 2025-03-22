@@ -5,7 +5,7 @@ const ColTwoGrid = () => {
   
   return (
     
-<section className="text-secondaryWhite relative bg-primaryBlack pt-16 xl:pt-24 xl:min-h-[1100px]" >
+<section className="text-secondaryWhite relative bg-primaryBlack pt-16 xl:pt-24 " >
 <div className="container">
 <div className="flex relative z-[1] flex-wrap gap-4 2xl:gap-6  mx-[-0.5rem] lg:pt-[24px] xl:mx-[-0.75rem] xl:pt-[40px] shortHeight:pt-8 2xl:pt-16">
 <div className="max-w-full md:basis-[calc(50%-8px)] 2xl:basis-[calc(50%-12px)] rounded-2xl  md:mt-10 card transition-all duration-300 ease-in-out shadow-darkShadow hover:shadow-orangeShadow">
